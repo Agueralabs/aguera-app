@@ -49,6 +49,7 @@ import {
 import { type ToolActionResult, ToolUpdate } from '@/types/util';
 
 import { SavedPromptsMenu } from './components/saved-prompts-menu';
+import { EVENTS } from '@/lib/events';
 
 // Types
 interface UploadingImage extends Attachment {
@@ -277,6 +278,7 @@ function MessageToolInvocations({
             result !== null &&
             'error' in result;
           const config = getToolConfig(toolName)!;
+          // TODO: fix intermitent issue where config is undefined
           const finalDisplayName = displayName || config.displayName;
 
           const header = (
@@ -395,7 +397,7 @@ function ChatMessage({
         {isUser && (
           <button
             onClick={handleSavePrompt}
-            className="mr-1 hidden group-hover:block"
+            className="mr-1 hidden group-hover:block hover:text-favorite pl-4 pt-4 pb-4 pr-2"
           >
             <Bookmark className="h-4 w-4" />
           </button>
@@ -729,7 +731,6 @@ export default function ChatInterface({
   // Use polling for fetching new messages
   usePolling({
     url: `/api/chat/${id}`,
-    id,
     onUpdate: (data: Message[]) => {
       if (!data) {
         return;
@@ -738,6 +739,8 @@ export default function ChatInterface({
       if (data && data.length) {
         setMessages(data);
       }
+
+      window.dispatchEvent(new CustomEvent(EVENTS.CONVERSATION_READ));
     },
   });
 
