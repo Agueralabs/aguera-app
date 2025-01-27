@@ -16,7 +16,7 @@ Auralex is an **open-source**, full-stack application that brings together the p
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![Solana](https://img.shields.io/badge/Solana-14F195?style=flat-square&logo=solana&logoColor=white&color=black)
 
-![Product Demo](./public/product.png)
+![Product Demo](./public/products.png)
 
 ## Features
 
