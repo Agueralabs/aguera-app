@@ -1,7 +1,7 @@
 /*
   Warnings:
 
-  - You are about to drop the column `telegramId` on the `users` table. All the data in the column will be lost.
+  - You are about to drop the column `telegramId` on the `users` table. All the data in that column will be lost.
 
 */
 -- AlterTable
