@@ -2,7 +2,7 @@
 
 > The Intelligent Copilot for Solana
 
-Neur is an **open-source**, full-stack application that brings together the power of LLM models and blockchain technology. Designed for the [Solana](https://solana.com/) ecosystem, Neur enables seamless interactions with DeFi protocols, NFTs, and much more.
+Auralex is an **open-source**, full-stack application that brings together the power of LLM models and blockchain technology. Designed for the [Solana](https://solana.com/) ecosystem, Neur enables seamless interactions with DeFi protocols, NFTs, and much more.
 
 [![GitHub stars](https://img.shields.io/github/stars/NeurProjects/neur-app?style=flat-square)](https://github.com/NeurProjects/neur-app/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://github.com/NeurProjects/neur-app/blob/main/LICENSE)
