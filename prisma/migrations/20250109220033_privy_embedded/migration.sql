@@ -10,6 +10,6 @@ DROP INDEX "wallets_ownerId_key";
 -- AlterTable
 ALTER TABLE "wallets" ADD COLUMN     "active" BOOLEAN NOT NULL DEFAULT true,
 ADD COLUMN     "chain" "Chain" NOT NULL DEFAULT 'SOLANA',
-ADD COLUMN     "delegated" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "delegate" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "walletSource" "WalletSource" NOT NULL DEFAULT 'CUSTOM',
 ALTER COLUMN "encryptedPrivateKey" DROP NOT NULL;
